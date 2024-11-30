@@ -3,15 +3,10 @@ Description: ASR System
 prompts:
   open_ai_propmt: |
     Analyze the following transcript and return the following:
-
     Sentiment Analysis: Determine the overall sentiment expressed in the transcript (positive, negative, neutral), along with sentiment for individual sentences or segments.
-
     Topic Extraction & Categorization: Identify and extract product-related topics discussed in the transcript, then categorize them into structured topics such as 'Network Issues', 'Billing', 'Customer Service', etc.
-
     Named Entity Recognition (NER): Identify and extract any relevant named entities in the transcript (e.g., product names, company names, technical terms, customer names).
-
     Summarization: Provide a concise summary of the key points from the transcript, highlighting the most important information.
-
     Structured Data Output: Return the analysis results in a structured format such as JSON, with key fields for sentiment, extracted topics, named entities, and summary
 
   novasamba_prompt: |

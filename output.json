@@ -13,16 +13,13 @@
                     "Mizra"
                 ],
                 "customer_names": [
-                    "Zaid"
+                    "Zaid",
+                    "Latifa"
                 ],
-                "product_names": [
-                    "Music"
-                ],
-                "technical_names": [
-                    "Batsher"
-                ]
+                "product_names": [],
+                "technical_names": []
             },
-            "summarization": "The conversation revolves around the family\"s financial struggles and the need to find a solution to their problems."
+            "summarization": "The conversation revolves around the family\\\"s financial struggles and the need to find a solution to their problems."
         }
     }
 }
