@@ -1,5 +1,5 @@
-from src.transcripe import TranscripeService
-from src.llm import LLMService
+from transcripe_service import TranscripeService
+from llm_service import LLMService
 
 import json
 
