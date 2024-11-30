@@ -1,0 +1,22 @@
+{
+    "analysis": {
+        "sentiment_analysis": "negative",
+        "topic_extraction_categorization": [
+            "Family Issues",
+            "Relationship",
+            "Emotional Conflict",
+            "Financial Issues"
+        ],
+        "named_entity_recognition": {
+            "product_names": [],
+            "company_names": [],
+            "technical_names": [],
+            "customer_names": [
+                "ميزر",
+                "زيد",
+                "فريحة"
+            ]
+        },
+        "summarization": "The transcript revolves around a familial conversation filled with emotional turmoil and conflict. The main discussion points include misunderstandings between family members, the pressure of financial difficulties, and the challenges of parenting. The characters express frustrations and seek understanding and agreement while dealing with personal challenges."
+    }
+}
