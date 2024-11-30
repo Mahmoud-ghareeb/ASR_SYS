@@ -29,7 +29,7 @@ This repository provides a pipeline for transcribing audio files and performing 
 
 Before running this pipeline, make sure you have the following installed:
 
-1. Python 3.8+ 
+1. Python 3.10+ 
 2. Required Python packages (listed in `requirements.txt`)
 
 ### Install Dependencies
@@ -37,8 +37,8 @@ Before running this pipeline, make sure you have the following installed:
 1. Clone the repository to your local machine.
 
     ```bash
-    git clone https://your-repository-url.git
-    cd your-repository-folder
+    git clone https://github.com/Mahmoud-ghareeb/ASR_SYS.git
+    cd ASR_SYS
     ```
 
 2. Install the necessary dependencies.
@@ -87,3 +87,4 @@ To run the pipeline, simply execute the `main.py` script. This script will:
 
 ```bash
 python main.py
+```
