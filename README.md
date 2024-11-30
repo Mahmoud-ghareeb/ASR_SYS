@@ -5,8 +5,8 @@
 This repository provides a pipeline for transcribing audio files and performing natural language analysis on the transcribed text. The pipeline uses the following services:
 
 1. **Transcription Service (`TranscripeService`)**: Converts audio to text.
-2. **Language Model Service (`LLMService`)**: Sends the transcribed text to an OpenAI model to perform further analysis, such as sentiment analysis, named entity recognition, summarization, and topic categorization.
-3. **Output**: The results are saved as a JSON file with structured data.
+2. **Language Model Service (`LLMService`)**: Sends the transcribed text to either (SambaNova / OpenAI) model to perform further analysis, such as sentiment analysis, named entity recognition, summarization, and topic categorization.
+3. **Output**: The results are saved as a JSON file with structured data named output.json .
 
 ## Project Structure
 
@@ -15,9 +15,9 @@ This repository provides a pipeline for transcribing audio files and performing 
 ```
 /project-root
     ├── configs
-    │   └── config.yaml  # Contains the initial prompt
+    │   └── config.yaml  # Contains the prompts for sambanova and openai
     ├── src
-    │   ├── transcripe.py  # Transcription service
+    │   ├── transcripe.py  # Transcription service using whisper
     │   └── llm.py  # Language model service
     ├── test_audios  # Directory for storing input audio files
     ├── output.json  # Output JSON file with analysis results
@@ -62,7 +62,7 @@ Before running this pipeline, make sure you have the following installed:
 The `TranscripeService` uses Whisper to transcribe the audio into text. This service accepts the path to an audio file (e.g., `.wav`, `.mp3`, etc.) and returns the transcribed text.
 
 ### 2. **LLM Service (`LLMService`)**:
-The `LLMService` takes the transcribed text and sends it to an OpenAI model or Sambanova model for further analysis. It can perform the following:
+The `LLMService` takes the transcribed text and sends it to an (OpenAI model or Sambanova model) for further analysis. It can perform the following:
 
 - **Sentiment Analysis**: Detects the overall sentiment (e.g., positive, negative, neutral).
 - **Named Entity Recognition (NER)**: Extracts key entities such as names, places, dates, etc.
@@ -73,6 +73,7 @@ The `LLMService` takes the transcribed text and sends it to an OpenAI model or S
 The main class, `PipeLine`, integrates the transcription and analysis process. It:
 
 - Accepts the path of an audio file.
+- The llm will be used (sambanova or open_ai)
 - Transcribes the audio into text using `TranscripeService`.
 - Sends the transcribed text to `LLMService` for further processing.
 - Saves the resulting analysis as a JSON file in a specified output path.
