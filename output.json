@@ -1,22 +1,28 @@
 {
-    "analysis": {
-        "sentiment_analysis": "neutral",
-        "topic_extraction_categorization": [
-            "Family Relations",
-            "Personal Conflicts",
-            "Marriage Plans",
-            "Financial Concerns",
-            "Communication Issues"
-        ],
-        "named_entity_recognition": {
-            "product_names": [],
-            "company_names": [],
-            "technical_names": [],
-            "customer_names": [
-                "ميزر",
-                "زيد"
-            ]
-        },
-        "summarization": "The transcript discusses familial issues revolving around relationships, misunderstandings, and financial concerns. It highlights the persistent conflict between parents and children regarding responsibilities and decision-making, particularly in the context of marriage arrangements and financial struggles."
+    "name": "get_analysis_of_a_transcript",
+    "parameters": {
+        "analysis": {
+            "sentiment_analysis": "negative",
+            "topic_extraction_categorization": [
+                "Network Issues",
+                "Billing",
+                "Customer Service"
+            ],
+            "named_entity_recognition": {
+                "company_names": [
+                    "Mizra"
+                ],
+                "customer_names": [
+                    "Zaid"
+                ],
+                "product_names": [
+                    "Music"
+                ],
+                "technical_names": [
+                    "Batsher"
+                ]
+            },
+            "summarization": "The conversation revolves around the family\"s financial struggles and the need to find a solution to their problems."
+        }
     }
 }
