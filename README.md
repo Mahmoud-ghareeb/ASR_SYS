@@ -10,17 +10,20 @@ This repository provides a pipeline for transcribing audio files and performing 
 
 ## Project Structure
 
-/project-root 
-    |── configs
-    │ ├── config.yaml #contains the initial prompt
-    ├── /src 
-    │ ├── /transcripe.py # Transcription service 
-    │ ├── /llm.py # Language model service 
-    ├── /test_audios # Directory for storing input audio files 
-    ├── /output.json # Output JSON file with analysis results 
-    ├── /README.md
-    |── /requirements.txt # Project dependencies 
-    |── /main.py # Main script to run the pipeline
+## Project Structure
+
+/project-root
+├── configs
+│   └── config.yaml  # Contains the initial prompt
+├── src
+│   ├── transcripe.py  # Transcription service
+│   └── llm.py  # Language model service
+├── test_audios  # Directory for storing input audio files
+├── output.json  # Output JSON file with analysis results
+├── README.md  # Project documentation
+├── requirements.txt  # Project dependencies
+└── main.py  # Main script to run the pipeline
+
 
 
 ## Installation
