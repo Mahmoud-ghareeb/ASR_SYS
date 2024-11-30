@@ -10,8 +10,6 @@ This repository provides a pipeline for transcribing audio files and performing 
 
 ## Project Structure
 
-## Project Structure
-
 ```
 /project-root
     ├── configs
