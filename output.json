@@ -1,11 +1,12 @@
 {
     "analysis": {
-        "sentiment_analysis": "negative",
+        "sentiment_analysis": "neutral",
         "topic_extraction_categorization": [
-            "Family Issues",
-            "Personal Relationships",
-            "Cultural Norms",
-            "Conflict Resolution"
+            "Family Relations",
+            "Personal Conflicts",
+            "Marriage Plans",
+            "Financial Concerns",
+            "Communication Issues"
         ],
         "named_entity_recognition": {
             "product_names": [],
@@ -13,11 +14,9 @@
             "technical_names": [],
             "customer_names": [
                 "ميزر",
-                "زيد",
-                "لطيفة",
-                "حصة"
+                "زيد"
             ]
         },
-        "summarization": "The transcript features a heated conversation discussing family dynamics, personal conflicts, and societal expectations surrounding marriage. The characters express frustration towards each other's actions, particularly focusing on cultural norms related to marriage and responsibilities towards family."
+        "summarization": "The transcript discusses familial issues revolving around relationships, misunderstandings, and financial concerns. It highlights the persistent conflict between parents and children regarding responsibilities and decision-making, particularly in the context of marriage arrangements and financial struggles."
     }
 }

@@ -86,22 +86,22 @@ class LLMService:
 
         self.sambanova_api_key = os.environ.get("SAMBANOVA_API_KEY")
         self.open_ai_api_key = os.environ.get("OPENAI_API_KEY")
-        self.initial_prompt = self.get_prompt()
 
 
-    def get_prompt(self):
+    def get_prompt(self, key="open_ai_propmt"):
         """
         Get The Initial Prompt From yaml File
         """
         
         with open('configs/config.yaml', 'r') as file:
-            return yaml.load(file, Loader=yaml.FullLoader)["prompts"]["initial_propmt"]
+            return yaml.load(file, Loader=yaml.FullLoader)["prompts"][key]
 
 
     def get_sambanova_response(self, message):
         """
         Function to use sembanova cloud API
         """
+        novasamba_prompt = self.get_prompt(key="novasamba_prompt")
 
         client = openai.OpenAI(
             api_key=self.sambanova_api_key,
@@ -111,7 +111,7 @@ class LLMService:
         response = client.chat.completions.create(
             model='Meta-Llama-3.1-8B-Instruct',
             messages=[
-                    {"role":"system","content": self.initial_prompt },
+                    {"role":"system","content": novasamba_prompt},
                     {"role":"user","content": message}
                 ],
             tools=self.tools,
@@ -134,6 +134,8 @@ class LLMService:
         Function to use OpenAi API
         """
 
+        open_ai_propmt = self.get_prompt(key="open_ai_propmt")
+
         client = openai.OpenAI(
             api_key=self.open_ai_api_key,
         )
@@ -141,7 +143,7 @@ class LLMService:
         response = client.chat.completions.create(
             model='gpt-4o-mini',
             messages=[
-                    {"role":"system","content": self.initial_prompt },
+                    {"role":"system","content": open_ai_propmt },
                     {"role":"user","content": message}
                 ],
             tools=self.tools,
